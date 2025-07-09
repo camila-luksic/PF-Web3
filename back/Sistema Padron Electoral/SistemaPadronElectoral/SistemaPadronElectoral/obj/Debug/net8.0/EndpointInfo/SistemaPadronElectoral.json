@@ -1,0 +1,487 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "SistemaPadronElectoral",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/PersonaVotantes/debug-roles": {
+      "get": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PersonaVotantes/solo-admin-padron": {
+      "get": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/PersonaVotantes": {
+      "get": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PersonaVotante"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PersonaVotante"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PersonaVotante"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Apellidos",
+                  "ci",
+                  "Direccion",
+                  "FotoCarnetAnverso",
+                  "FotoCarnetReverso",
+                  "FotoVotante",
+                  "idRecinto",
+                  "Nombres"
+                ],
+                "type": "object",
+                "properties": {
+                  "ci": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Nombres": {
+                    "type": "string"
+                  },
+                  "Apellidos": {
+                    "type": "string"
+                  },
+                  "Direccion": {
+                    "type": "string"
+                  },
+                  "idRecinto": {
+                    "type": "string"
+                  },
+                  "FotoCarnetAnverso": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FotoCarnetReverso": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FotoVotante": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "ci": {
+                  "style": "form"
+                },
+                "Nombres": {
+                  "style": "form"
+                },
+                "Apellidos": {
+                  "style": "form"
+                },
+                "Direccion": {
+                  "style": "form"
+                },
+                "idRecinto": {
+                  "style": "form"
+                },
+                "FotoCarnetAnverso": {
+                  "style": "form"
+                },
+                "FotoCarnetReverso": {
+                  "style": "form"
+                },
+                "FotoVotante": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PersonaVotantes/by-guid/{id}": {
+      "get": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PersonaVotantes/by-ci/{ci}": {
+      "get": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "parameters": [
+          {
+            "name": "ci",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PersonaVotante"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/PersonaVotantes/{ci}": {
+      "put": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "parameters": [
+          {
+            "name": "ci",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Apellidos",
+                  "ci",
+                  "Direccion",
+                  "FotoCarnetAnverso",
+                  "FotoCarnetReverso",
+                  "FotoVotante",
+                  "idRecinto",
+                  "Nombres"
+                ],
+                "type": "object",
+                "properties": {
+                  "ci": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "Nombres": {
+                    "type": "string"
+                  },
+                  "Apellidos": {
+                    "type": "string"
+                  },
+                  "Direccion": {
+                    "type": "string"
+                  },
+                  "idRecinto": {
+                    "type": "string"
+                  },
+                  "FotoCarnetAnverso": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FotoCarnetReverso": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "FotoVotante": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "ci": {
+                  "style": "form"
+                },
+                "Nombres": {
+                  "style": "form"
+                },
+                "Apellidos": {
+                  "style": "form"
+                },
+                "Direccion": {
+                  "style": "form"
+                },
+                "idRecinto": {
+                  "style": "form"
+                },
+                "FotoCarnetAnverso": {
+                  "style": "form"
+                },
+                "FotoCarnetReverso": {
+                  "style": "form"
+                },
+                "FotoVotante": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PersonaVotantes"
+        ],
+        "parameters": [
+          {
+            "name": "ci",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PersonaVotante": {
+        "required": [
+          "apellidos",
+          "ci",
+          "direccion",
+          "idRecinto",
+          "nombres"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "ci": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idRecinto": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nombres": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "apellidos": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "direccion": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "fotoCarnetAnversoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "fotoCarnetReversoPath": {
+            "type": "string",
+            "nullable": true
+          },
+          "fotoVotantePath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

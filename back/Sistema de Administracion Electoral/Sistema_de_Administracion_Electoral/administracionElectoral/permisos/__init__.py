@@ -1,0 +1,2 @@
+from .permisos import EsAdministradorElectoral
+from .jwt_auth_custom import CustomJWTAuthentication

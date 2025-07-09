@@ -1,0 +1,6 @@
+C:\Users\Camila\Downloads\PF-Web3\Backend\Sistema Padron Electoral\SistemaPadronElectoral\SistemaPadronElectoral\wwwroot\uploads\12345\f808464a-03a3-41ae-9939-c55ad3789606_carnet_reverso.jpeg
+C:\Users\Camila\Downloads\PF-Web3\Backend\Sistema Padron Electoral\SistemaPadronElectoral\SistemaPadronElectoral\wwwroot\uploads\12345\900b5235-0baa-417e-9600-07e2be5c0fa1_votante_foto.jpeg
+C:\Users\Camila\Downloads\PF-Web3\Backend\Sistema Padron Electoral\SistemaPadronElectoral\SistemaPadronElectoral\wwwroot\uploads\59485\d760ee3c-6324-4503-bc73-a0fb8886ff3c_votante_foto.jpg
+C:\Users\Camila\Downloads\PF-Web3\Backend\Sistema Padron Electoral\SistemaPadronElectoral\SistemaPadronElectoral\wwwroot\uploads\59485\28284eec-5139-4e7b-b5fb-200076cd0381_carnet_reverso.jpg
+C:\Users\Camila\Downloads\PF-Web3\Backend\Sistema Padron Electoral\SistemaPadronElectoral\SistemaPadronElectoral\wwwroot\uploads\9632\606bb4b4-cb65-4aec-9fea-9317a23901f0_carnet_reverso.jpg
+C:\Users\Camila\Downloads\PF-Web3\Backend\Sistema Padron Electoral\SistemaPadronElectoral\SistemaPadronElectoral\wwwroot\uploads\9632\83d20697-825c-48f0-b7dc-3e89bf85e35b_votante_foto.jpg
